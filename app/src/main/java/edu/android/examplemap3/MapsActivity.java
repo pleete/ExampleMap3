@@ -16,7 +16,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
-    LocationCallback callback;
+
     private GoogleMap mMap;
 
     @Override
@@ -24,36 +24,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        Intent intent = new Intent(this, GpsService.class);
-        startService(intent);
-        callback = new LocationCallback(){
-            @Override
-            public void onLocationResult(LocationResult locationResult) {
-                Location location = locationResult.getLastLocation();
-                double lat = location.getLatitude();
-                double lon = location.getLongitude();
 
-                LatLng latLng = new LatLng(lat,lon);
-
-                updateGoogleMap(latLng);
-            }
-        };
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
 
-    private void updateGoogleMap(LatLng latLng) {
-        if(mMap ==null){
-            // GoogleMap 객체가 생성되어 있지 않을 때는 화면 업데이트 불가능
-            return;
-        }
-        mMap.clear();
-        mMap.addMarker(new MarkerOptions().position(latLng));
-//        mMap.setMinZoomPreference(15);
-
-        mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-    }
 
 
     @Override
