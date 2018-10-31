@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "398336300548",
+    "firebase_url": "https://examplemap3-ae6d6.firebaseio.com",
+    "project_id": "examplemap3-ae6d6",
+    "storage_bucket": "examplemap3-ae6d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398336300548:android:5153ab2e7ffdb2e3",
+        "android_client_info": {
+          "package_name": "edu.android.examplemap3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398336300548-u0k9ojlo0840a311b9rlla72gne4q4g5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.android.examplemap3",
+            "certificate_hash": "11ead51f0df3b04128a485418f46e6d2a76322c6"
+          }
+        },
+        {
+          "client_id": "398336300548-bbpsp8qsdl44qt5ibthkg66ouso7c5oe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ8YG05VQ9l1V9H-O78U7wIOSwTDHFH_0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398336300548-bbpsp8qsdl44qt5ibthkg66ouso7c5oe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
